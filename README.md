@@ -81,7 +81,8 @@ _Techniciens_.
    * Un `Commercial` a comme attributs `chiffreAffaires` et `tauxCommission`  (tous les deux de type `double`).
    * Un `Fabricant` a comme attributs `nbUnitesProduites` et `tauxCommissionUnite` (type `int`et `double` respectivement).
    * Un `Technicien` n'a pour l'instant aucun nouveau attribut, ni aucune nouvelle méthode.
- Implémentez les classes correspondantes en les faisant hériter de la classe `Employe`.
+   
+   Implémentez les classes correspondantes en les faisant hériter de la classe `Employe`.
 
 2. Un commercial peut négocier des transactions (avec la méthode `negocierTransaction()`), un fabricant fabrique des
 produits (méthode `fabriquerProduit()`), un technicien effectue les autres tâches dans l’entreprise
@@ -116,8 +117,8 @@ instancié en tant que tel), mais doit être distingué en tant que _vendeur_ ou
 Ajoutez les deux classes correspondantes en faisant un héritage de `Commercial`. Vous ajouterez également à la classe
 `Commercial`, le code nécessaire afin que cette classe ne soit pas instanciable.
 
-7. Pour terminer, faites en sorte que la méthode de calcul du salaire brut d'un vendeur soit la même que la méthode
-de calcul du salaire brut d'un commercial, alors que la formule de calcul du salaire brut des représentants soit la même
+7. Pour terminer, faites en sorte que la méthode de calcul du salaire brut d'un vendeur soit _toujours_ la même que la méthode
+de calcul du salaire brut d'un commercial, alors que la formule de calcul du salaire brut des représentants soit _toujours_ la même
 que celle utilisée pour le salaire brut des _techniciens_. Ajoutez cette fonctionnalité dans votre application.
 
    **Attention** à ne pas dupliquer du code (principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas))
