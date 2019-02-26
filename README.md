@@ -43,6 +43,8 @@ une opération valide. On dira ici, que pour chaque modification de votre progra
 Afin de respecter les divers principes en programmation orientée objets (encapsulation, DRY, YAGNI etc.), vous essayerez
 d'éviter au maximum de _modifier_ le programme écrit précédemment pour ne pas trop augmenter cette dette...
 
+Dans tout ce TP, tous les attributs doivent être `private` (en particulier il est **interdit** d'utiliser le mot clef `protected`)
+
 # Exercice 1
 
 1. Dans un premier temps vous devez modéliser les employés qui sont représentés par les données suivantes : numéro de
