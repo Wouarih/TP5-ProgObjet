@@ -43,9 +43,9 @@ une opération valide. On dira ici, que pour chaque modification de votre progra
 Afin de respecter les divers principes en programmation orientée objets (encapsulation, DRY, YAGNI etc.), vous essayerez
 d'éviter au maximum de _modifier_ le programme écrit précédemment pour ne pas trop augmenter cette dette...
 
-Dans tout ce TP, tous les attributs doivent être `private` (en particulier il est **interdit** d'utiliser le mot clef `protected`)
+Dans tout ce TP, tous les attributs devraient être `private` (en particulier il est **très déconseillé** d'utiliser le mot clef `protected`)
 
-# Exercice 1
+### Exercice 1
 
 1. Dans un premier temps vous devez modéliser les employés qui sont représentés par les données suivantes : numéro de
    sécurité sociale, nom, prénom, échelon (entier naturel). Implémentez la classe `Employe`
@@ -65,7 +65,7 @@ Dans tout ce TP, tous les attributs doivent être `private` (en particulier il e
  de la manière suivante : `base * nbHeures`, où `base` et `nbHeures` seront des attributs de type `double`.
  Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire pour intégrer ces fonctionnalités.
  
-3. Redéfinissez la méthode `toString()` dans la classe `Employe` pour afficher les informations concernant un employé
+3. Redéfinissez la méthode `String toString()` dans la classe `Employe` pour afficher les informations concernant un employé
 (y compris ses salaires brut et net).
  
 4. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et la fixer à `base * nbHeures * 1.05`, combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
@@ -75,7 +75,7 @@ __Remarque__ : dans ce qui suit, le salaire brut d'un employé restera toujours 
 employés (avec le builder) et afficherez les informations les concernant.
 
 
-# Exercice 2
+### Exercice 2
 
 1. Maintenant votre client se rend compte qu’une séparation des traitements est nécessaire pour les différents types
 d'employés. Il faut spécifier les cas des _Commerciaux_, _Fabricants_, et les autres employés qu’on appellera
@@ -86,10 +86,10 @@ _Techniciens_.
    
    Implémentez les classes correspondantes en les faisant hériter de la classe `Employe`.
 
-2. Un commercial peut négocier des transactions (avec la méthode `negocierTransaction()`), un fabricant fabrique des
-produits (méthode `fabriquerProduit()`), un technicien effectue les autres tâches dans l’entreprise
-(méthode `effectuerTacheTechnique()`). Chacune de ces méthodes sont de type `void` et se contentent
-d'afficher un message approprié pour illustrer leur bon fonctionnement. Par exemple, la méthode `negocierTransaction()`
+2. Un commercial peut négocier des transactions (avec la méthode `void negocierTransaction()`), un fabricant fabrique des
+produits (méthode `void fabriquerProduit()`), un technicien effectue les autres tâches dans l’entreprise
+(méthode `void effectuerTacheTechnique()`). Chacune de ces méthodes sont de type `void` et se contentent
+d'afficher un message approprié pour illustrer leur bon fonctionnement. Par exemple, la méthode `void negocierTransaction()`
 devra afficher ”_Je négocie une transaction_”.
 
 3. Vérifiez votre programme dans la classe principale, en instanciant un objet pour chaque nouveau type d'employé et en
