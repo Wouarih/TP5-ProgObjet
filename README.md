@@ -30,9 +30,9 @@ Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'es
 
 Cliquez sur le lien ci-dessous pour faire votre fork privé du TP :
 
-https://classroom.github.com/a/ZHgcAjxK
+LIEN A AJOUTER ICI
 
-Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche 24 février à 23h00**
+Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche ***** à 23h00**
 
 Vous êtes chargés de proposer une application de gestion des employés dans une entreprise.
 L’objectif est de développer votre application de manière incrémentale, en ajoutant les fonctionnalités demandées au fur
