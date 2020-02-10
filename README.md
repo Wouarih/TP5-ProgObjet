@@ -6,7 +6,7 @@
 * **Enseignants:** [Marin Bougeret](mailto:marin.bougeret@umontpellier.fr), [Sébastien Gagné](mailto:sebastien.gagne@umontpellier.fr), [Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr), [Jérôme Palaysi](mailto:jerome.palaysi@umontpellier.fr), [Victor Poupet](mailto:victor.poupet@umontpellier.fr), [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
 * Le [forum Piazza](https://piazza.com/class/k52c8w685w3210) de ce cours pour poser vos questions
 * [Email](mailto:petru.valicov@umontpellier.fr) pour une question d'ordre privée concernant le cours.
-* Le [sujet du TP](TP5.pdf) en format .pdf téléchargeable et imprimable.
+* Le [sujet du TP](https://pageperso.lis-lab.fr/~petru.valicov/Cours/M2103/TP5.pdf) en format .pdf téléchargeable et imprimable.
 
 Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'espace de stockage autorisé :
 
@@ -32,7 +32,7 @@ Cliquez sur le lien ci-dessous pour faire votre fork privé du TP :
 
 LIEN A AJOUTER ICI
 
-Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche ***** à 23h00**
+Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche 8 mars à 23h00**
 
 Vous êtes chargés de proposer une application de gestion des employés dans une entreprise.
 L’objectif est de développer votre application de manière incrémentale, en ajoutant les fonctionnalités demandées au fur
