@@ -32,7 +32,7 @@ Cliquez sur le lien ci-dessous pour faire votre fork privé du TP :
 
 LIEN A AJOUTER ICI
 
-Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche 8 mars à 23h00**
+Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche 1 mars à 23h00**
 
 Vous êtes chargés de proposer une application de gestion des employés dans une entreprise.
 L’objectif est de développer votre application de manière incrémentale, en ajoutant les fonctionnalités demandées au fur
@@ -115,7 +115,9 @@ appelant sa fonction spécifique.
 modifications devez-vous apporter à votre code, pour que ça fonctionne ?
 
 6. Maintenant, votre client se rend compte qu’un `Commercial` ne peut pas être un simple commercial (donc ne peut pas être
-instancié en tant que tel), mais doit être distingué en tant que _vendeur_ ou _représentant_.
+instancié en tant que tel), mais doit être distingué en tant que _vendeur_ ou _représentant_. Un vendeur doit peut vendre des
+produits (méthode `void vendreProduit()`) et un représentant peut représenter l'entreprise auprès des différents clients
+(méthode `void representerEntreprise()`).
 Ajoutez les deux classes correspondantes en faisant un héritage de `Commercial`. Vous ajouterez également à la classe
 `Commercial`, le code nécessaire afin que cette classe ne soit pas instanciable.
 
@@ -129,4 +131,4 @@ que celle utilisée pour le salaire brut des _techniciens_. Ajoutez cette foncti
 
 8. Quels sont les avantages et inconvénients de votre approche ?
 
-8. **Question facultative** : dessinez le diagramme de classes afin de mieux comprendre votre solution.
+9. **Question facultative** : dessinez le diagramme de classes afin de mieux comprendre votre solution.
