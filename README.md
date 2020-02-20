@@ -18,10 +18,14 @@ Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'es
 * Pour éviter des problèmes durant vos TPs d'informatique, vous devriez toujours **garder 300-400 Mo d'espace libre**.
 
 
-### Consignes
+### Consignes obligatoires pour ce TP
 - Vous respecterez toutes les [consignes](https://github.com/IUTInfoMontp-M2103/TP4#consignes) indiquées dans le TP précédent
-- Dans ce TP, un principe important que vous devriez essayer de respecter dans votre code est le principe
+- Vous respecterez les conventions de nommage *Java* (vues en [cours](http://pageperso.lis-lab.fr/~petru.valicov/Cours/M2103/BPOO_Generalites_x4.pdf)
+ou disponibles sur le site d'Oracle). Prêtez une attention particulière au respect des noms de classes, attributs et méthodes qui vous seront demandés.
 [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)
+- Pour chaque question nécessitant une vérification automatique, vous écrirez des tests unitaires, pour valider votre solution.
+Une solution sans aucun test sera considérée comme non-valide.
+- Vous noterez vos réponses aux questions qui du sujet dans un fichier **reponses.md** que vous déposerez à la racine de votre dépôt Git.
 
 
 
@@ -48,7 +52,8 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
 ### Exercice 1
 
 1. Dans un premier temps vous devez modéliser les employés qui sont représentés par les données suivantes : numéro de
-   sécurité sociale, nom, prénom, échelon (entier naturel). Implémentez la classe `Employe`
+   sécurité sociale, nom, échelon (entier naturel). Pour pouvoir calculer le salaire brut et le salaire net d'un employé,
+   deux attributs supplémentaires de type `double` sont nécessaires : `base` et `nbHeures`. Implémentez la classe `Employe`
    correspondante et ajoutez-y un constructeur approprié. Le constructeur ayant beaucoup de paramètres, il vous est également
     demandé de proposer un builder pour une construction plus souple (cf.
     [question 5, Exercice 3 du TP3](https://github.com/IUTInfoMontp-M2103/tp3#exercice-3-bonus)).
@@ -61,15 +66,16 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
    
    ![](ressources/ParametresBuilder.png)
 
-2. On souhaite pouvoir calculer le salaire brut et le salaire net d'un employé.  Le salaire brut de l’employé se calcule
- de la manière suivante : `base * nbHeures`, où `base` et `nbHeures` seront des attributs de type `double`.
- Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire pour intégrer ces fonctionnalités.
+2. Le salaire brut de l’employé se calcule de la manière suivante : `base * nbHeures`.
+ Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire pour intégrer ces fonctionnalités et proposez des accesseurs
+`getSalaireBrut()` et `getSalaireNet()`
  
 3. Redéfinissez la méthode `String toString()` dans la classe `Employe` pour afficher les informations concernant un employé
 (y compris ses salaires brut et net).
  
-4. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et la fixer à `base * nbHeures * 1.05`, combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
-__Remarque__ : dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
+4. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et la fixer à `base * nbHeures * 1.05`,
+combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
+__Rappel__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
 5. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
 employés (avec le builder) et afficherez les informations les concernant.
@@ -77,8 +83,8 @@ employés (avec le builder) et afficherez les informations les concernant.
 
 ### Exercice 2
 
-1. Maintenant votre client se rend compte qu’une séparation des traitements est nécessaire pour les différents types
-d'employés. Il faut spécifier les cas des _Commerciaux_, _Fabricants_, et les autres employés qu’on appellera
+1. Avec le développement de l'entreprise, une séparation des traitements pour les différents types
+d'employés devient nécessaire. Il faut spécifier les cas des _Commerciaux_, _Fabricants_, et les autres employés qu’on appellera
 _Techniciens_.
    * Un `Commercial` a comme attributs `chiffreAffaires` et `tauxCommission`  (tous les deux de type `double`).
    * Un `Fabricant` a comme attributs `nbUnitesProduites` et `tauxCommissionUnite` (type `int`et `double` respectivement).
@@ -112,16 +118,18 @@ appelant sa fonction spécifique.
    le code précédemment écrit.
 
 5. Le patron est devenu plus généreux et a décidé d’ajouter 100€ au salaire brut de tous ses employés ! Combien de
-modifications devez-vous apporter à votre code, pour que ça fonctionne ?
+modifications devez-vous apporter à votre code, pour que cela fonctionne ?
 
-6. Maintenant, votre client se rend compte qu’un `Commercial` ne peut pas être un simple commercial (donc ne peut pas être
-instancié en tant que tel), mais doit être distingué en tant que _vendeur_ ou _représentant_. Un vendeur doit peut vendre des
+### Exercice 3
+
+1. Maintenant, votre client se rend compte qu’un `Commercial` ne peut pas être un simple commercial (donc ne peut pas être
+instancié en tant que tel), mais doit être distingué en tant que `Vendeur` ou `Représentant`. Un vendeur doit peut vendre des
 produits (méthode `void vendreProduit()`) et un représentant peut représenter l'entreprise auprès des différents clients
 (méthode `void representerEntreprise()`).
 Ajoutez les deux classes correspondantes en faisant un héritage de `Commercial`. Vous ajouterez également à la classe
 `Commercial`, le code nécessaire afin que cette classe ne soit pas instanciable.
 
-7. Pour terminer, faites en sorte que la méthode de calcul du salaire brut d'un vendeur soit _toujours_ la même que la méthode
+2. Pour terminer, faites en sorte que la méthode de calcul du salaire brut d'un vendeur soit _toujours_ la même que la méthode
 de calcul du salaire brut d'un commercial, alors que la formule de calcul du salaire brut des représentants soit _toujours_ la même
 que celle utilisée pour le salaire brut des _techniciens_. Ajoutez cette fonctionnalité dans votre application.
 
@@ -129,6 +137,6 @@ que celle utilisée pour le salaire brut des _techniciens_. Ajoutez cette foncti
    et à ne pas modifier le code précédemment écrit ! Sinon la [dette](https://fr.wikipedia.org/wiki/Dette_technique)
    de votre logiciel va augmenter. :smirk:
 
-8. Quels sont les avantages et inconvénients de votre approche ?
+3. Quels sont les avantages et inconvénients de votre approche ?
 
-9. **Question facultative** : dessinez le diagramme de classes afin de mieux comprendre votre solution.
+4. Dessinez le diagramme de classes afin de mieux comprendre votre solution.
