@@ -18,7 +18,7 @@ Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'es
 * Pour éviter des problèmes durant vos TPs d'informatique, vous devriez toujours **garder 300-400 Mo d'espace libre**.
 
 
-### Consignes obligatoires pour ce TP
+### Consignes (importantes pour la notation)
 - Vous respecterez toutes les [consignes](https://github.com/IUTInfoMontp-M2103/TP4#consignes) indiquées dans le TP précédent
 - Vous respecterez les conventions de nommage *Java* (vues en [cours](http://pageperso.lis-lab.fr/~petru.valicov/Cours/M2103/BPOO_Generalites_x4.pdf)
 ou disponibles sur le site d'Oracle). Prêtez une attention particulière au respect des noms de classes, attributs et méthodes qui vous seront demandés.
@@ -34,7 +34,7 @@ Une solution sans aucun test sera considérée comme non-valide.
 
 Cliquez sur le lien ci-dessous pour faire votre fork privé du TP :
 
-LIEN A AJOUTER ICI
+https://classroom.github.com/a/b0wjVQmn
 
 Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche 1 mars à 23h00**
 
@@ -76,7 +76,7 @@ et proposez des méthodes respectives `getSalaireBrut()` et `getSalaireNet()`.
  
 4. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et la fixer à `base * nbHeures * 1.05`,
 combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
-__Rappel__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
+__Remarque__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
 5. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
 employés (avec le builder) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les exercices précédents !
