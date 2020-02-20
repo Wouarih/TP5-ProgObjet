@@ -79,7 +79,7 @@ combien de changement devriez-vous effectuer pour que votre programme continue d
 __Rappel__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
 5. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
-employés (avec le builder) et afficherez les informations les concernant.
+employés (avec le builder) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les exercices précédents !
 
 
 ### Exercice 2
@@ -87,9 +87,9 @@ employés (avec le builder) et afficherez les informations les concernant.
 1. Avec le développement de l'entreprise, une séparation des traitements pour les différents types
 d'employés devient nécessaire. Il faut spécifier les cas des _Commerciaux_, _Fabricants_, et les autres employés qu’on appellera
 _Techniciens_.
-   * Un `Commercial` a comme attributs `chiffreAffaires` et `tauxCommission`  (tous les deux de type `double`).
-   * Un `Fabricant` a comme attributs `nbUnitesProduites` et `tauxCommissionUnite` (type `int`et `double` respectivement).
-   * Un `Technicien` n'a pour l'instant aucun nouveau attribut, ni aucune nouvelle méthode.
+   * La classe `Commercial` a comme attributs `chiffreAffaires` et `tauxCommission`  (tous les deux de type `double`).
+   * La classe `Fabricant` a comme attributs `nbUnitesProduites` et `tauxCommissionUnite` (type `int`et `double` respectivement).
+   * La classe `Technicien` n'a pour l'instant aucun nouveau attribut, ni aucune nouvelle méthode.
    
    Implémentez les classes correspondantes en les faisant hériter de la classe `Employe`.
 
@@ -114,7 +114,7 @@ appelant sa fonction spécifique.
     * **Important :** La modalité de calcul du salaire net demeure inchangée pour tous les employés (à savoir 80% du
     salaire brut).
     
-   _Redéfinissez_ la méthode calcul de salaire brut dans chaque classe d'employé spécifique pour prendre en compte
+   _Redéfinissez_ la méthode `getSalaireBrut()` dans chaque classe d'employé spécifique pour prendre en compte
    ces nouvelles formules. Vous ajouterez le code qui vous paraît nécessaire à la classe `Employe` mais sans modifier
    le code précédemment écrit.
 
@@ -140,4 +140,4 @@ que celle utilisée pour le salaire brut des _techniciens_. Ajoutez cette foncti
 
 3. Quels sont les avantages et inconvénients de votre approche ?
 
-4. Dessinez le diagramme de classes afin de mieux comprendre votre solution.
+4. Dessinez le diagramme de classes afin de mieux comprendre votre solution. Vous déposerez le diagramme sous forme d'image (.png ou .jpg) à la racine de votre dépôt Git.
