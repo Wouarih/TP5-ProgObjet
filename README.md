@@ -22,7 +22,7 @@ Avant de démarrer le TP, vérifiez que vous n'avez pas atteint votre quota d'es
 - Vous respecterez toutes les [consignes](https://github.com/IUTInfoMontp-M2103/TP4#consignes) indiquées dans le TP précédent
 - Vous respecterez les conventions de nommage *Java* (vues en [cours](http://pageperso.lis-lab.fr/~petru.valicov/Cours/M2103/BPOO_Generalites_x4.pdf)
 ou disponibles sur le site d'Oracle). Prêtez une attention particulière au respect des noms de classes, attributs et méthodes qui vous seront demandés.
-[DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)
+- Dans ce TP, un principe important que vous devriez essayer de respecter dans votre code est le principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas).
 - Pour chaque question nécessitant une vérification automatique, vous écrirez des tests unitaires, pour valider votre solution.
 Une solution sans aucun test sera considérée comme non-valide.
 - Vous noterez vos réponses aux questions qui du sujet dans un fichier **reponses.md** que vous déposerez à la racine de votre dépôt Git.
@@ -66,9 +66,10 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
    
    ![](ressources/ParametresBuilder.png)
 
+
 2. Le salaire brut de l’employé se calcule de la manière suivante : `base * nbHeures`.
- Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire pour intégrer ces fonctionnalités et proposez des accesseurs
-`getSalaireBrut()` et `getSalaireNet()`
+ Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire (attributs et méthodes) pour intégrer ces fonctionnalités
+et proposez des méthodes respectives `getSalaireBrut()` et `getSalaireNet()`.
  
 3. Redéfinissez la méthode `String toString()` dans la classe `Employe` pour afficher les informations concernant un employé
 (y compris ses salaires brut et net).
