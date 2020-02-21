@@ -102,11 +102,7 @@ devra afficher ”_Je négocie une transaction_”.
 3. Vérifiez votre programme dans la classe principale, en instanciant un objet pour chaque nouveau type d'employé et en
 appelant sa fonction spécifique.
 
-4. Déclarez un objet de type `Employe` et instanciez-le en tant que `Commercial`. Observez le résultat de l'appel des méthodes
-`getSalaireBrut()` et `getSalaireNet()`. Est-ce que la méthode `negocierTransaction()` est accessible ?
-Expliquez en comparant avec le scénario où l'objet serait déclaré en tant que `Commercial`. 
-
-5. On souhaite varier le calcul des salaires bruts des différents types d’employés :
+4. On souhaite varier le calcul des salaires bruts des différents types d’employés :
     * Le salaire brut d’un technicien est composé de son salaire brut en tant qu’employé + une majoration
     en fonction de son échelon. Dans notre exemple, le résultat de ce calcul devrait correspondre à 
     `base ∗ nbHeures + echelon ∗ 100`.
@@ -121,6 +117,10 @@ Expliquez en comparant avec le scénario où l'objet serait déclaré en tant qu
    _Redéfinissez_ la méthode `getSalaireBrut()` dans chaque classe d'employé spécifique pour prendre en compte
    ces nouvelles formules. Vous ajouterez le code qui vous paraît nécessaire à la classe `Employe` mais sans modifier
    le code précédemment écrit.
+
+5. Déclarez un objet de type `Employe` et instanciez-le en tant que `Fabricant`. Observez le résultat de l'appel des méthodes
+`getSalaireBrut()` et `getSalaireNet()`. Est-ce que la méthode `fabriquerProduit()` est accessible ?
+Expliquez en comparant avec le scénario où l'objet serait déclaré en tant que `Fabricant`. 
 
 6. Le patron est devenu plus généreux et a décidé d’ajouter 100€ au salaire brut de tous ses employés ! Combien de
 modifications devez-vous apporter à votre code, pour que cela fonctionne ?
