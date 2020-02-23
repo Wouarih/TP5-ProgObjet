@@ -66,8 +66,7 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
    _Replace Constructor with Builder_ :
    ![](ressources/GenerationBuilder.png)
    * Dans la fenêtre qui s'affiche vous cocherez tous les paramètres comme indiqué dans le dessin ci-dessous et cliquerez
-    sur le bouton _Refactor_ :
-   
+    sur le bouton _Refactor_ :   
    ![](ressources/ParametresBuilder.png)
 
 
@@ -126,8 +125,8 @@ appelant sa fonction spécifique.
 `getSalaireBrut()` et `getSalaireNet()`. Est-ce que la méthode `fabriquerProduit()` est accessible ?
 Expliquez en comparant avec le scénario où l'objet serait déclaré en tant que `Fabricant`. 
 
-6. Le patron est devenu plus généreux et a décidé d’ajouter 100€ au salaire brut de tous ses employés ! Combien de
-modifications devez-vous apporter à votre code, pour que cela fonctionne ?
+6. Si le patron devient plus généreux et décide d’ajouter 100€ au salaire brut de tous ses employés, combien de
+modifications devez-vous apporter à votre code pour que cela fonctionne ?
 
 ### Exercice 3
 
