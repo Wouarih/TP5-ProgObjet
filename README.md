@@ -47,14 +47,18 @@ une opération valide. On dira ici, que pour chaque modification de votre progra
 Afin de respecter les divers principes en programmation orientée objets (encapsulation, DRY, YAGNI etc.), vous essayerez
 d'éviter au maximum de _modifier_ le programme écrit précédemment pour ne pas trop augmenter cette dette...
 
-Dans tout ce TP, tous les attributs devraient être `private` (en particulier il est **très déconseillé** d'utiliser le mot clef `protected`)
+Dans tout ce TP, tous les attributs devraient être `private` (en particulier il est **très déconseillé** d'utiliser la visibilité `protected` pour les attributs).
 
 ### Exercice 1
 
 1. Dans un premier temps vous devez modéliser les employés qui sont représentés par les données suivantes : numéro de
    sécurité sociale, nom, échelon (entier naturel). Pour pouvoir calculer le salaire brut et le salaire net d'un employé,
    deux attributs supplémentaires de type `double` sont nécessaires : `base` et `nbHeures`. Implémentez la classe `Employe`
-   correspondante et ajoutez-y un constructeur approprié. Le constructeur ayant beaucoup de paramètres, il vous est également
+   correspondante et ajoutez-y le constructeur suivant (**avec les paramètres dans cet ordre**) :
+     ```
+       public Employe(String nrINSEE, String nom, int echelon, double base, double nbHeures)
+    ```
+2. Le constructeur ayant beaucoup de paramètres, il vous est également
     demandé de proposer un builder pour une construction plus souple (cf.
     [question 5, Exercice 3 du TP3](https://github.com/IUTInfoMontp-M2103/tp3#exercice-3-bonus)).
     Vous pouvez générer le builder de manière automatique avec l'outil de refactoring d'IntelliJ IDEA :
@@ -67,18 +71,18 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
    ![](ressources/ParametresBuilder.png)
 
 
-2. Le salaire brut de l’employé se calcule de la manière suivante : `base * nbHeures`.
+3. Le salaire brut de l’employé se calcule de la manière suivante : `base * nbHeures`.
  Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire (attributs et méthodes) pour intégrer ces fonctionnalités
 et proposez des méthodes respectives `getSalaireBrut()` et `getSalaireNet()`.
  
-3. Redéfinissez la méthode `String toString()` dans la classe `Employe` pour afficher les informations concernant un employé
+4. Redéfinissez la méthode `String toString()` dans la classe `Employe` pour afficher les informations concernant un employé
 (y compris ses salaires brut et net).
  
-4. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et la fixer à `base * nbHeures * 1.05`,
+5. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et la fixer à `base * nbHeures * 1.05`,
 combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
 __Remarque__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
-5. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
+6. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
 employés (avec le builder) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les exercices précédents !
 
 
