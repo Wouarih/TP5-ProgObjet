@@ -92,7 +92,14 @@ d'employés devient nécessaire. Il faut spécifier les cas des _Commerciaux_, _
    * La classe `Fabricant` a comme attributs `nbUnitesProduites` et `tauxCommissionUnite` (type `int`et `double` respectivement).
    * La classe `Technicien` n'a pour l'instant aucun nouveau attribut, ni aucune nouvelle méthode.
    
-   Implémentez les classes correspondantes en les faisant hériter de la classe `Employe`. Ne générez pas des _builders_ pour ces classes pour le moment.
+   Implémentez les classes correspondantes en les faisant hériter de la classe `Employe`. Voici la signature des constructeurs de ces classes :
+     ```
+       public Commercial(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
+       public Fabricant(String nrINSEE, String nom, int echelon, double base, double nbHeures, int nbUnitesProduites, double tauxCommissionUnite)
+       public Technicien(String nrINSEE, String nom, int echelon, double base, double nbHeures)
+    ```
+        
+    Ne générez pas des _builders_ pour ces classes pour le moment.
 
 2. Un commercial peut négocier des transactions (avec la méthode `void negocierTransaction()`), un fabricant fabrique des
 produits (méthode `void fabriquerProduit()`), un technicien effectue les autres tâches dans l’entreprise
@@ -134,6 +141,11 @@ produits (méthode `void vendreProduit()`) et un représentant peut représenter
 (méthode `void representerEntreprise()`).
 Ajoutez les deux classes correspondantes en faisant un héritage de `Commercial`. Vous ajouterez également à la classe
 `Commercial`, le code nécessaire afin que cette classe ne soit pas instanciable.
+ Voici la signature des constructeurs de ces classes :
+     ```
+       public Vendeur(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
+       public Representant(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
+    ```
 
 2. Implémentez les _builders_ pour les classes `Technicien`, `Fabricant`, `Representant` et `Vendeur`.
   **Remarque :** Observez la duplication de code entre les différentes classes _builders_ (non-respect du principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)). Pour le moment, pour des raisons de facilité nous allons tolérer ce défaut et laisser les classes _builders_ telles qu'elles. Dans quelques semaines, après avoir suffisamment avancé dans le cours, nous y reviendront pour améliorer. Pour les curieux : https://stackoverflow.com/questions/21086417/builder-pattern-and-inheritance Une explication approfondie et une solution sont également données dans _Effective Java_ de J. Blosch, (3ème édition).
