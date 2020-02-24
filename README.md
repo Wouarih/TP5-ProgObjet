@@ -25,7 +25,7 @@ ou disponibles sur le site d'Oracle). Prêtez une attention particulière au res
 - Dans ce TP, un principe important que vous devriez essayer de respecter dans votre code est le principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas).
 - Pour chaque question nécessitant une vérification automatique, vous écrirez des tests unitaires, pour valider votre solution.
 Une solution sans aucun test sera considérée comme non-valide.
-- Vous noterez vos réponses aux questions qui du sujet dans un fichier **reponses.md** que vous déposerez à la racine de votre dépôt Git.
+- Vous noterez vos réponses aux questions du sujet dans un fichier **reponses.md** que vous déposerez à la racine de votre dépôt Git.
 
 
 
@@ -51,7 +51,7 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
 
 ### Exercice 1
 
-1. Dans un premier temps vous devez modéliser les employés qui sont représentés par les données suivantes : numéro de
+1. Dans un premier temps vous devez modéliser les employés représentés par les données suivantes : numéro de
    sécurité sociale, nom, échelon (entier naturel). Pour pouvoir calculer le salaire brut et le salaire net d'un employé,
    deux attributs supplémentaires de type `double` sont nécessaires : `base` et `nbHeures`. Implémentez la classe `Employe`
    correspondante et ajoutez-y le constructeur suivant (**avec les paramètres dans cet ordre**) :
@@ -59,7 +59,7 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
        public Employe(String nrINSEE, String nom, int echelon, double base, double nbHeures)
     ```
 2. Le constructeur ayant beaucoup de paramètres, il vous est également
-    demandé de proposer un builder pour une construction plus souple (cf.
+    demandé de proposer un _builder_ pour une construction plus souple (cf.
     [question 5, Exercice 3 du TP3](https://github.com/IUTInfoMontp-M2103/tp3#exercice-3-bonus)).
     Vous pouvez générer le builder de manière automatique avec l'outil de refactoring d'IntelliJ IDEA :
    * clic droit sur le nom du constructeur de votre classe &rightarrow; _Refactor_ &rightarrow;
@@ -71,25 +71,23 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
 
 
 3. Le salaire brut de l’employé se calcule de la manière suivante : `base * nbHeures`.
- Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire (attributs et méthodes) pour intégrer ces fonctionnalités
-et proposez des méthodes respectives `getSalaireBrut()` et `getSalaireNet()`.
+ Le salaire net représentera toujours 80% du salaire brut. Ajoutez le code nécessaire (attributs et méthodes) pour intégrer ces fonctionnalités et proposez des méthodes respectives `getSalaireBrut()` et `getSalaireNet()`.
  
 4. Redéfinissez la méthode `String toString()` dans la classe `Employe` pour afficher les informations concernant un employé
 (y compris ses salaires brut et net).
  
-5. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et la fixer à `base * nbHeures * 1.05`,
+5. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et de la fixer à `base * nbHeures * 1.05`,
 combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
 __Remarque__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
 6. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
-employés (avec le builder) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les exercices précédents !
+employés (avec le _builder_) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les exercices précédents !
 
 
 ### Exercice 2
 
 1. Avec le développement de l'entreprise, une séparation des traitements pour les différents types
-d'employés devient nécessaire. Il faut spécifier les cas des _Commerciaux_, _Fabricants_, et les autres employés qu’on appellera
-_Techniciens_.
+d'employés devient nécessaire. Il faut spécifier les cas des _Commerciaux_, _Fabricants_, et les autres employés qu’on appellera _Techniciens_.
    * La classe `Commercial` a comme attributs `chiffreAffaires` et `tauxCommission`  (tous les deux de type `double`).
    * La classe `Fabricant` a comme attributs `nbUnitesProduites` et `tauxCommissionUnite` (type `int`et `double` respectivement).
    * La classe `Technicien` n'a pour l'instant aucun nouveau attribut, ni aucune nouvelle méthode.
@@ -98,7 +96,7 @@ _Techniciens_.
 
 2. Un commercial peut négocier des transactions (avec la méthode `void negocierTransaction()`), un fabricant fabrique des
 produits (méthode `void fabriquerProduit()`), un technicien effectue les autres tâches dans l’entreprise
-(méthode `void effectuerTacheTechnique()`). Chacune de ces méthodes sont de type `void` et se contentent
+(méthode `void effectuerTacheTechnique()`). Toutes ces méthodes est de type `void` et se contentent
 d'afficher un message approprié pour illustrer leur bon fonctionnement. Par exemple, la méthode `void negocierTransaction()`
 devra afficher ”_Je négocie une transaction_”.
 
