@@ -136,7 +136,7 @@ modifications devez-vous apporter à votre code pour que cela fonctionne ?
 ### Exercice 3
 
 1. Maintenant, votre client se rend compte qu’un `Commercial` ne peut pas être un simple commercial (donc ne peut pas être
-instancié en tant que tel), mais doit être distingué en tant que `Vendeur` ou `Représentant`. Un vendeur doit peut vendre des
+instancié en tant que tel), mais doit être distingué en tant que `Vendeur` ou `Representant`. Un vendeur doit peut vendre des
 produits (méthode `void vendreProduit()`) et un représentant peut représenter l'entreprise auprès des différents clients
 (méthode `void representerEntreprise()`).
 Ajoutez les deux classes correspondantes en faisant un héritage de `Commercial`. Vous ajouterez également à la classe
