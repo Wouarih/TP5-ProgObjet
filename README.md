@@ -81,7 +81,7 @@ combien de changement devriez-vous effectuer pour que votre programme continue d
 __Remarque__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
 6. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
-employés (avec le _builder_) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les exercices précédents !
+employés (avec le _builder_) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les questions précédentes !
 
 
 ### Exercice 2
@@ -103,7 +103,7 @@ d'employés devient nécessaire. Il faut spécifier les cas des _Commerciaux_, _
 
 2. Un commercial peut négocier des transactions (avec la méthode `void negocierTransaction()`), un fabricant fabrique des
 produits (méthode `void fabriquerProduit()`), un technicien effectue les autres tâches dans l’entreprise
-(méthode `void effectuerTacheTechnique()`). Toutes ces méthodes est de type `void` et se contentent
+(méthode `void effectuerTacheTechnique()`). Toutes ces méthodes sont de type `void` et se contentent
 d'afficher un message approprié pour illustrer leur bon fonctionnement. Par exemple, la méthode `void negocierTransaction()`
 devra afficher ”_Je négocie une transaction_”.
 
