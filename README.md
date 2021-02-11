@@ -26,9 +26,7 @@
 ou disponibles sur le site d'Oracle). Prêtez une attention particulière au respect des noms de classes, attributs et méthodes qui vous seront demandés.
 - Dans ce TP, un principe important que vous devriez essayer de respecter dans votre code est le principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas).
 - Pour chaque question nécessitant une vérification automatique, vous écrirez des tests unitaires, pour valider votre solution.
-Une solution sans aucun test sera considérée comme non-valide.
-- Vous noterez vos réponses aux questions du sujet dans un fichier **reponses.md** que vous déposerez à la racine de votre dépôt Git.
-
+- **Vous nommerez les classes telles que demandé dans le sujet et respecterez les signatures des méthodes qui vous sont demandées. Sinon, votre code ne pourra pas être testé...**
 
 
 ## TP5
@@ -41,8 +39,7 @@ https://classroom.github.com/a/Aa2TX0UU
 Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche 21 février à 23h00**
 
 Vous êtes chargés de proposer une application de gestion des employés dans une entreprise.
-L’objectif est de développer votre application de manière incrémentale, en ajoutant les fonctionnalités demandées au fur
-et à mesure __sans modifier les fonctionnalités écrites précédemment__. Ce que l'on considère ici comme _modification_
+L’objectif est de développer votre application de manière incrémentale, en ajoutant les fonctionnalités demandées au fur et à mesure __sans modifier les fonctionnalités écrites précédemment__ (à moins qu'il vous est demandé explicitement de modifier le code). Ce que l'on considère ici comme _modification_
 c'est effacer et/ou réécrire du code précédemment écrit. _Ajouter_ du code sans modifier le code précédent est donc
 une opération valide. On dira ici, que pour chaque modification de votre programme (effacement et réécriture) la
 [dette](https://fr.wikipedia.org/wiki/Dette_technique) de votre logiciel augmente.
@@ -56,8 +53,8 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
 1. Dans un premier temps vous devez modéliser les employés représentés par les données suivantes : numéro de
    sécurité sociale, nom, échelon (entier naturel). Pour pouvoir calculer le salaire brut et le salaire net d'un employé,
    deux attributs supplémentaires de type `double` sont nécessaires : `base` et `nbHeures`. Implémentez la classe `Employe`
-   correspondante et ajoutez-y le constructeur suivant (**avec les paramètres dans cet ordre**) :
-     ```
+   qui vous est donnée et complétez son constructeur (**avec les paramètres dans cet ordre**) :
+    ```java
        public Employe(String nrINSEE, String nom, int echelon, double base, double nbHeures)
     ```
 2. Le constructeur ayant beaucoup de paramètres, il vous est également
@@ -82,10 +79,9 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
  
 5. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et de la fixer à `base * nbHeures * 1.05`,
 combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
-__Remarque__ : comme convenu précédement, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
+__Remarque__ : comme convenu précédemment, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
-6. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs
-employés (avec le _builder_) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les questions précédentes !
+6. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs employés (avec le _builder_) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les questions précédentes !
 
 
 ### Exercice 2
@@ -97,7 +93,7 @@ d'employés devient nécessaire. Il faut spécifier les cas des _Commerciaux_, _
    * La classe `Technicien` n'a pour l'instant aucun nouveau attribut, ni aucune nouvelle méthode.
    
    Implémentez les classes correspondantes en les faisant hériter de la classe `Employe`. Voici la signature des constructeurs de ces classes :
-     ```
+    ```java
        public Commercial(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
        public Fabricant(String nrINSEE, String nom, int echelon, double base, double nbHeures, int nbUnitesProduites, double tauxCommissionUnite)
        public Technicien(String nrINSEE, String nom, int echelon, double base, double nbHeures)
@@ -140,19 +136,21 @@ modifications devez-vous apporter à votre code pour que cela fonctionne ?
 ### Exercice 3
 
 1. Maintenant, votre client se rend compte qu’un `Commercial` ne peut pas être un simple commercial (donc ne peut pas être
-instancié en tant que tel), mais doit être distingué en tant que `Vendeur` ou `Representant`. Un vendeur peut vendre des
-produits (méthode `void vendreProduit()`) et un représentant peut représenter l'entreprise auprès des différents clients
-(méthode `void representerEntreprise()`).
-Ajoutez les deux classes correspondantes en faisant un héritage de `Commercial`. Vous ajouterez également à la classe
-`Commercial`, le code nécessaire afin que cette classe ne soit pas instanciable.
- Voici la signature des constructeurs de ces classes :
-     ```
-       public Vendeur(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
-       public Representant(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
+   instancié en tant que tel), mais doit être distingué en tant que `Vendeur` ou `Representant`. Un vendeur peut vendre des
+   produits (méthode `void vendreProduit()`) et un représentant peut représenter l'entreprise auprès des différents clients
+   (méthode `void representerEntreprise()`). Ajoutez les deux classes correspondantes en faisant un héritage de `Commercial`.
+
+   Voici la signature des constructeurs de ces classes :
+    ```java
+    public Vendeur(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
+    public Representant(String nrINSEE, String nom, int echelon, double base, double nbHeures, double chiffreAffaires, double tauxCommission)
     ```
 
+   Pour rendre la classe `Commercial` non-instanciable il faut modifier sa déclaration en ajoutant le mot-clé `abstract` : `public abstract class`. Observez les changements à faire à l'utilisation des objets `Commercial`.
+
 2. Implémentez les _builders_ pour les classes `Technicien`, `Fabricant`, `Representant` et `Vendeur`.
-  **Remarque :** Observez la duplication de code entre les différentes classes _builders_ (non-respect du principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)). Pour le moment, pour des raisons de facilité nous allons tolérer ce défaut et laisser les classes _builders_ telles quelles. Dans quelques semaines, après avoir suffisamment avancé dans le cours, nous y reviendront pour améliorer. Pour les curieux : https://stackoverflow.com/questions/21086417/builder-pattern-and-inheritance Une explication approfondie et une solution sont également données dans _Effective Java_ de J. Blosch, (3ème édition).
+
+    **Remarque :** Observez la duplication de code entre les différentes classes _builders_ (non-respect du principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)). Pour le moment, pour des raisons de facilité nous allons tolérer ce défaut et laisser les classes _builders_ telles quelles. Dans quelques semaines, après avoir suffisamment avancé dans le cours, nous y reviendront pour améliorer. Pour les curieux : https://stackoverflow.com/questions/21086417/builder-pattern-and-inheritance Une explication approfondie et une solution sont également données dans _Effective Java_ de J. Blosch, (3ème édition).
 
 3. Pour terminer, faites en sorte que la méthode de calcul du salaire brut d'un vendeur soit _toujours_ la même que la méthode
 de calcul du salaire brut d'un commercial, alors que la formule de calcul du salaire brut des représentants soit _toujours_ la même
