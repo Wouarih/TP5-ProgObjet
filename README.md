@@ -70,6 +70,8 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
    * Dans la fenêtre qui s'affiche vous cocherez tous les paramètres comme indiqué dans le dessin ci-dessous et cliquerez
     sur le bouton _Refactor_ :   
    ![](ressources/ParametresBuilder.png)
+     
+   * **Important :** générer le builder, ne veut pas dire changer le constructeur de la classe `Employe`... **il ne faut pas** changer la signature du constructeur de `Employe` qui vous est donnée
 
 
 3. Le salaire brut de l’employé se calcule de la manière suivante : `base * nbHeures`.
