@@ -63,12 +63,15 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
     Vous pouvez générer le builder de manière automatique avec l'outil de refactoring d'IntelliJ IDEA :
    * clic droit sur le nom du constructeur de votre classe &rightarrow; _Refactor_ &rightarrow;
    _Replace Constructor with Builder_ :
-   ![](ressources/GenerationBuilder.png)
+     
+    ![](ressources/GenerationBuilder.png)
    * Dans la fenêtre qui s'affiche vous cocherez tous les paramètres comme indiqué dans le dessin ci-dessous et cliquerez
     sur le bouton _Refactor_ :   
    ![](ressources/ParametresBuilder.png)
      
-   * **Important :** générer le builder, ne veut pas dire changer le constructeur de la classe `Employe`... **il ne faut pas** changer la signature du constructeur de `Employe` qui vous est donnée
+   C'est possible de générer le builder dans d'autres IDE, mais c'est moins automatique.
+   
+   **Important :** générer le builder, ne veut pas dire changer le constructeur de la classe `Employe`... **il ne faut pas** changer la signature du constructeur de `Employe` qui vous est donnée
 
 
 3. Le salaire brut de l’employé se calcule de la manière suivante : `base * nbHeures`.
