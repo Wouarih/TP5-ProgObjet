@@ -82,7 +82,8 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
  
 5. Si votre client vous demande de changer (modifier donc) la formule de calcul du salaire brut et de la fixer à `base * nbHeures * 1.05`,
 combien de changement devriez-vous effectuer pour que votre programme continue de fonctionner correctement ? Est-ce que vous pouvez faire mieux ?
-__Remarque__ : comme convenu précédemment, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
+   
+    __Remarque__ : comme convenu précédemment, dans ce qui suit, le salaire brut d'un employé restera toujours le même, à savoir `base * nbHeures`
    
 6. Vérifiez votre solution dans le programme principal (la classe `GestionEmployes`). Vous y instancierez plusieurs employés (avec le _builder_) et afficherez les informations les concernant. N'oubliez pas les tests unitaires pour les questions précédentes !
 
@@ -122,7 +123,7 @@ appelant sa fonction spécifique.
     * Le salaire brut d’un fabricant est calculé de la même manière que le salaire brut d’un employé en ajoutant une
     rémunération supplémentaire en fonction du rendement. Dans notre exemple, le résultat de ce calcul devrait
     correspondre à `base ∗ nbHeures + nbUnitesProduites ∗ tauxCommissionUnite`.
-    * **Important :** La modalité de calcul du salaire net demeure inchangée pour tous les employés (à savoir 80% du
+    * **Important :** la modalité de calcul du salaire net demeure inchangée pour tous les employés (à savoir 80% du
     salaire brut).
     
    _Redéfinissez_ la méthode `getSalaireBrut()` dans chaque classe d'employé spécifique pour prendre en compte
@@ -153,7 +154,7 @@ modifications devez-vous apporter à votre code pour que cela fonctionne ?
 
 2. Implémentez les _builders_ pour les classes `Technicien`, `Fabricant`, `Representant` et `Vendeur`.
 
-    **Remarque :** Observez la duplication de code entre les différentes classes _builders_ (non-respect du principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)). Pour le moment, pour des raisons de facilité nous allons tolérer ce défaut et laisser les classes _builders_ telles quelles. Dans quelques semaines, après avoir suffisamment avancé dans le cours, nous y reviendront pour améliorer. Pour les curieux : https://stackoverflow.com/questions/21086417/builder-pattern-and-inheritance Une explication approfondie et une solution sont également données dans _Effective Java_ de J. Blosch, (3ème édition).
+    **Remarque :** observez la duplication de code entre les différentes classes _builders_ (non-respect du principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas)). Pour le moment, pour des raisons de facilité nous allons tolérer ce défaut et laisser les classes _builders_ telles quelles. Dans quelques semaines, après avoir suffisamment avancé dans le cours, nous y reviendront pour améliorer. Pour les curieux : https://stackoverflow.com/questions/21086417/builder-pattern-and-inheritance Une explication approfondie et une solution sont également données dans _Effective Java_ de J. Blosch, (3ème édition).
 
 3. Pour terminer, faites en sorte que la méthode de calcul du salaire brut d'un vendeur soit _toujours_ la même que la méthode
 de calcul du salaire brut d'un commercial, alors que la formule de calcul du salaire brut des représentants soit _toujours_ la même
