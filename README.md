@@ -166,6 +166,6 @@ que celle utilisée pour le salaire brut des _techniciens_. Ajoutez cette foncti
 
 4. Quels sont les avantages et inconvénients de votre approche ?
 
-5. Dessinez le diagramme de classes afin de mieux comprendre votre solution. Vous déposerez le diagramme sous forme d'image (.png ou .jpg) à la racine de votre dépôt Git.
+5. **Bonus :** dessinez le diagramme de classes afin de mieux comprendre votre solution. Vous déposerez le diagramme sous forme d'image (.png ou .jpg) à la racine de votre dépôt Git.
 
     **Note** : les _builders_ ne doivent pas faire partie de votre diagramme de classes
