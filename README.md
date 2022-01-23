@@ -1,12 +1,12 @@
 # ![](ressources/logo.jpeg)
 
-# Bases de la programmation orientée objet
+# Développement Orienté Objets
 
 ### IUT Montpellier-Sète – Département Informatique
 
-* **Cours:** [M2103](http://cache.media.enseignementsup-recherche.gouv.fr/file/25/09/7/PPN_INFORMATIQUE_256097.pdf) - support [ici](https://github.com/IUTInfoMontp-M2103/Ressources)
+* **Cours:** [M2103](http://cache.media.enseignementsup-recherche.gouv.fr/file/25/09/7/PPN_INFORMATIQUE_256097.pdf) - support [ici](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/Ressources)
 * **Enseignants:** [Marin Bougeret](mailto:marin.bougeret@umontpellier.fr), [Romain Lebreton](mailto:romain.lebreton@umontpellier.fr), [Sophie Nabitz](mailto:sophie.nabitz@univ-avignon.fr), [Victor Poupet](mailto:victor.poupet@umontpellier.fr), [Petru Valicov](mailto:petru.valicov@umontpellier.fr)
-* Le [forum Piazza](https://piazza.com/class/kjifrxy1n0i3xa) de ce cours pour poser vos questions
+* Le [forum Piazza](https://piazza.com/class/kyo4oooauez252) de ce cours pour poser vos questions
 * [Email](mailto:petru.valicov@umontpellier.fr) pour une question d'ordre privée concernant le cours.
 * Le [sujet du TP](https://pageperso.lis-lab.fr/~petru.valicov/Cours/M2103/TP5.pdf) en format .pdf téléchargeable et imprimable.
 
@@ -21,7 +21,7 @@
 -->
 
 ### Consignes (importantes pour la notation)
-- Vous respecterez toutes les [consignes](https://github.com/IUTInfoMontp-M2103/TP4#consignes) indiquées dans le TP précédent
+- Vous respecterez toutes les [consignes](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/TP4#consignes) indiquées dans le TP précédent
 - Vous respecterez les conventions de nommage *Java* (vues en [cours](http://pageperso.lis-lab.fr/~petru.valicov/Cours/M2103/BPOO_Generalites_x4.pdf)
 ou disponibles sur le site d'Oracle). Prêtez une attention particulière au respect des noms de classes, attributs et méthodes qui vous seront demandés.
 - Dans ce TP, un principe important que vous devriez essayer de respecter dans votre code est le principe [DRY](https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas).
@@ -59,7 +59,7 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
     ```
 2. Le constructeur ayant beaucoup de paramètres, il vous est également
     demandé de proposer un _builder_ pour une construction plus souple (cf.
-    [question 5, Exercice 3 du TP3](https://github.com/IUTInfoMontp-M2103/tp3#exercice-3-bonus)).
+    [question 5, Exercice 3 du TP3](https://gitlabinfo.iutmontp.univ-montp2.fr/dev-objets/tp3#exercice-3-bonus)).
     Vous pouvez générer le builder de manière automatique avec l'outil de refactoring d'IntelliJ IDEA :
    * clic droit sur le nom du constructeur de votre classe &rightarrow; _Refactor_ &rightarrow;
    _Replace Constructor with Builder_ :
