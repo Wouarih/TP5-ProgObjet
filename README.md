@@ -154,3 +154,11 @@ Dans tout ce TP, tous les attributs devraient être `private` (en particulier il
    **Note** : les _builders_ ne doivent pas faire partie de votre diagramme de classes.
 
 7. **Bonus :** Si vous êtes vraiment en avance, essayez de proposer une solution qui évite la duplication de code entre les différentes classes de builder. Vous travaillerez dans paquetage différent pour cela.
+
+
+7. **Bonus :** Si vous êtes vraiment en avance, essayez de proposer une solution qui évite la duplication de code entre les différentes classes de builder. Vous travaillerez dans un paquetage différent pour cela. Pour avoir une vraie solution flexible, il faudrait que :
+   * Un `Employe` soit instantiable en tant que `Employe`, mais aussi en tant que `Fabricant`, `Representant`, etc.
+   * Un `Commercial` soit instantiable en tant que `Representant` et `Vendeur`.
+   * Un `Representant` puisse être instantialbe en tant que `Representant`, un `Technicien` en tant que `Technicien`, etc.
+   * Les duplications de code entre les _setters_ des différents builders soient supprimées.
+   * Il n'y ait aucun _cast_ dans votre code (conversion explicite d'un type à un autre, à la main).
