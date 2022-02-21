@@ -37,7 +37,7 @@
 
 
 
-## TP5
+## TP 5 : Système de gestion des employés
 #### _Thème : Héritage - réutiliser, mais sans en abuser_
 
 Date limite de rendu de votre code sur le dépôt GitHub : **Dimanche 27 février à 23h00**
