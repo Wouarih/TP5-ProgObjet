@@ -114,7 +114,7 @@ Vous êtes chargés de développer un système de gestion d'employés. Chaque em
 3. Vérifiez votre programme dans la classe principale, en instanciant un objet pour chaque nouveau type d'employé et en appelant sa fonction spécifique.
 
 4. On souhaite varier le calcul des salaires bruts des différents types d’employés :
-    * Le salaire brut d’un technicien est composé de son salaire brut en tant qu’employé + une majoration en fonction de son échelon et du nombre de tâches effectuées. Plus concrètement, le résultat du retour de la fonction de calcul du salaire brut devra être égal à `base ∗ nbHeures + echelon ∗ 100`.
+    * Le salaire brut d’un technicien est composé de son salaire brut en tant qu’employé + une majoration en fonction de son échelon. Plus concrètement, le résultat du retour de la fonction de calcul du salaire brut devra être égal à `base ∗ nbHeures + echelon ∗ 100`.
     * Le salaire brut d’un commercial dépend du chiffre d’affaires qu’il réalise. Ainsi, le salaire brut se calcule suivant la formule `base + chiffreAffaires ∗ tauxCommission`.
     * Le salaire brut d’un fabricant est calculé de la même manière que le salaire brut d’un employé en ajoutant une rémunération supplémentaire en fonction du rendement. Dans notre exemple, le résultat de ce calcul devrait correspondre à `base ∗ nbHeures + nbUnitesProduites ∗ tauxCommissionUnite`.
     * **Important :** la modalité de calcul du salaire net demeure inchangée pour tous les employés (à savoir 80% du salaire brut).
