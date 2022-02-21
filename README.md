@@ -154,9 +154,6 @@ Vous êtes chargés de développer un système de gestion d'employés. Chaque em
 
    **Note** : les _builders_ ne doivent pas faire partie de votre diagramme de classes.
 
-7. **Bonus :** Si vous êtes vraiment en avance, essayez de proposer une solution qui évite la duplication de code entre les différentes classes de builder. Vous travaillerez dans paquetage différent pour cela.
-
-
 7. **Bonus :** Si vous êtes vraiment en avance, essayez de proposer une solution qui évite la duplication de code entre les différentes classes de builder. Vous travaillerez dans un paquetage différent pour cela. Pour avoir une vraie solution flexible, il faudrait que :
    * Un `Employe` soit instantiable en tant que `Employe`, mais aussi en tant que `Fabricant`, `Representant`, etc.
    * Un `Commercial` soit instantiable en tant que `Representant` et `Vendeur`.
