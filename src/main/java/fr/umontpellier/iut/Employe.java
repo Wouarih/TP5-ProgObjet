@@ -1,8 +1,18 @@
 package fr.umontpellier.iut;
 
 public class Employe {
-    public Employe(String nrINSEE, String nom, int echelon, double base, double nbHeures){
-        throw new RuntimeException("Méthode non implémentée ! Effacez cette ligne et écrivez le code nécessaire");
+    private String nrINSEE;
+    private String nom;
+    private int echelon;
+    private double base;
+    private double nbHeures;
+
+    public Employe(String nrINSEE, String nom, int echelon, double base, double nbHeures) {
+        this.nrINSEE = nrINSEE;
+        this.nom = nom;
+        this.echelon = echelon;
+        this.base = base;
+        this.nbHeures = nbHeures;
     }
 
 }
