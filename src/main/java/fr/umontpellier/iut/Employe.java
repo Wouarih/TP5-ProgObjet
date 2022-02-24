@@ -67,13 +67,13 @@ public class Employe {
         }
     }
 
-    public double getBrutS() {
+    public double getSalaireBrut() {
         brutS = base * nbHeures;
         return brutS;
     }
 
-    public double getNetS() {
-        netS = getBrutS()/0.8;
+    public double getSalaireNet() {
+        netS = getSalaireBrut()/0.8;
         return netS;
     }
 
