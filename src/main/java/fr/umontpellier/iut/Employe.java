@@ -6,13 +6,17 @@ public class Employe {
     private int echelon;
     private double base;
     private double nbHeures;
+    private double brutS;
+    private double netS;
 
-    public Employe(String nrINSEE, String nom, int echelon, double base, double nbHeures) {
+    public Employe(String nrINSEE, String nom, int echelon, double base, double nbHeures, double brutS, double netS) {
         this.nrINSEE = nrINSEE;
         this.nom = nom;
         this.echelon = echelon;
         this.base = base;
         this.nbHeures = nbHeures;
+        this.brutS = brutS;
+        this.netS = netS;
     }
 
     public static class EmployeBuilder {
@@ -21,6 +25,8 @@ public class Employe {
         private int echelon;
         private double base;
         private double nbHeures;
+        private double brutS;
+        private double netS;
 
         public EmployeBuilder setNrINSEE(String nrINSEE) {
             this.nrINSEE = nrINSEE;
@@ -47,8 +53,17 @@ public class Employe {
             return this;
         }
 
+
+        public void setBrutS(double brutS) {
+            this.brutS = brutS;
+        }
+
+        public void setNetS(double netS) {
+            this.netS = netS;
+        }
+
         public Employe createEmploye() {
-            return new Employe(nrINSEE, nom, echelon, base, nbHeures);
+            return new Employe(nrINSEE, nom, echelon, base, nbHeures, brutS, netS);
         }
     }
 
