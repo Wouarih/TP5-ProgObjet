@@ -4,7 +4,14 @@ public class GestionEmployes {
 
     public static void main(String[] args) {
 
-    Employe e1 = new Employe("1001","Oiry", 1, 15,35);
+    Employe e1 = new Employe.EmployeBuilder().createEmploye();
+
+        e1 = new Employe.EmployeBuilder()
+                .setNrINSEE("1")
+                .setNom("Oiry")
+                .setBase(15)
+                .setNbHeures(35)
+                .createEmploye();
 
         System.out.println(e1);
 
