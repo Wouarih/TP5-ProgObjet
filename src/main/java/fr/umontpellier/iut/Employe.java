@@ -76,4 +76,17 @@ public class Employe {
         netS = getBrutS()/0.8;
         return netS;
     }
+
+    @Override
+    public String toString() {
+        return "Employe{" +
+                "nrINSEE='" + nrINSEE + '\'' +
+                ", nom='" + nom + '\'' +
+                ", echelon=" + echelon +
+                ", base=" + base +
+                ", nbHeures=" + nbHeures +
+                ", brutS=" + brutS +
+                ", netS=" + netS +
+                '}';
+    }
 }
