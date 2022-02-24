@@ -1,3 +1,4 @@
 extends --> héritage
 
-4-
+4- Je n'ai besoin de faire qu'une seule modification grâce au getSalaireBrut que je réutilise dans le getSalaireNet. Dans le cas où je ne l'aurais pas
+utilisé, il aurait été nécessaire de faire plus de modifications.
