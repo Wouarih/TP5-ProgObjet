@@ -78,8 +78,8 @@ public class Employe {
                 ", echelon=" + echelon +
                 ", base=" + base +
                 ", nbHeures=" + nbHeures +
-                ", brutS=" + salaireBrut +
-                ", netS=" + salaireNet +
+                ", salaireBrut=" + salaireBrut +
+                ", salaireNet=" + salaireNet +
                 '}';
     }
 }

@@ -14,7 +14,7 @@ public class Commercial extends Employe{
 
     public void negocierTransaction(double sommeGagnée){
         chiffreAffaires+=sommeGagnée;
-        System.out.println("negociation");
+        System.out.println("Transaction négocié");
     }
 
 
