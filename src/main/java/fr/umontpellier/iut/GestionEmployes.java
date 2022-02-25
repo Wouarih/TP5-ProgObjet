@@ -45,7 +45,7 @@ public class GestionEmployes {
 
         Technicien t1 = new Technicien.TechnicienBuilder().setNrINSEE("t1").setNom("tech").setEchelon(1).setBase(12).setNbHeures(35).createTechnicien();
         //t1.effectuerTacheTechnique();
-        //System.out.println(t1);
+        System.out.println(t1);
 
 
         Commercial c1 = new Vendeur.VendeurBuilder().setNrINSEE("c1").setNom("commercial").setEchelon(1).setBase(20).setNbHeures(30).setChiffreAffaires(3000).setTauxCommission(20).createVendeur();
@@ -54,14 +54,15 @@ public class GestionEmployes {
 
 
         Fabricant f1 = new Fabricant.FabricantBuilder().setNrINSEE("f1").setNom("fabriquant").setEchelon(3).setBase(14).setNbHeures(35).setNbUnitesProduites(100).setTauxCommissionUnite(10).createFabricant();
-        f1.fabriquerProduits(50);
+        //f1.fabriquerProduits(50);
         //System.out.println(f1);
 
         Employe e5 = new Fabricant.FabricantBuilder().setNrINSEE("f2").setNom("fab").setEchelon(2).setBase(10).setNbHeures(35).setNbUnitesProduites(100).setTauxCommissionUnite(10).createFabricant();
-        System.out.println(e5);
+        //System.out.println(e5);
         //e5.fabriquerProduits(20); réponse question 5 exercice 2 dans le document texte
 
-
+        Representant r5 = new Representant.RepresentantBuilder().setNom("rpz").setEchelon(1).setBase(12).setNbHeures(35).setRepresentation(10).createRepresentant();
+        System.out.println(r5);
 
 
 

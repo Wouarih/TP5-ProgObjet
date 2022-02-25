@@ -68,4 +68,17 @@ public class Representant extends Commercial{
             return new Representant(nrINSEE, nom, echelon, base, nbHeures, chiffreAffaires, tauxCommission, representation);
         }
     }
+
+
+
+    @Override
+    public double getSalaireBrut() {
+        Technicien technicien = new Technicien.TechnicienBuilder()
+                .setEchelon(this.getEchelon())
+                .setBase(this.getBase())
+                .setNbHeures(this.getNbHeures())
+                .createTechnicien();
+
+        return technicien.getSalaireBrut()+representation*123;
+    }
 }

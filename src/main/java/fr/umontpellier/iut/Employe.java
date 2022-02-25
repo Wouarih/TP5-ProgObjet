@@ -77,6 +77,10 @@ public class Employe {
         return base;
     }
 
+    public double getNbHeures() {
+        return nbHeures;
+    }
+
     @Override
     public String toString() {
         return "Employe{" +
