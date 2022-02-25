@@ -43,16 +43,27 @@ public class GestionEmployes {
         //System.out.println(e3);
         //System.out.println(e4);
 
-        Technicien t1 = new Technicien("t1", "tech", 2, 12,35);
+        Technicien t1 = new Technicien.TechnicienBuilder().setNrINSEE("t1").setNom("tech").setEchelon(1).setBase(12).setNbHeures(35).createTechnicien();
         //t1.effectuerTacheTechnique();
+        //System.out.println(t1);
 
 
-        Commercial c1 = new Commercial("c1", "commercial", 1, 20, 30, 30000, 20);
+        Commercial c1 = new Vendeur.VendeurBuilder().setNrINSEE("c1").setNom("commercial").setEchelon(1).setBase(20).setNbHeures(30).setChiffreAffaires(3000).setTauxCommission(20).createVendeur();
         //c1.negocierTransaction(5000);
+        //System.out.println(c1);
 
-        Fabricant f1 = new Fabricant("f1", "fabriquant", 3, 14, 35, 100, 10);
-        //f1.fabriquerProduits(50);
-        System.out.println(f1);
+
+        Fabricant f1 = new Fabricant.FabricantBuilder().setNrINSEE("f1").setNom("fabriquant").setEchelon(3).setBase(14).setNbHeures(35).setNbUnitesProduites(100).setTauxCommissionUnite(10).createFabricant();
+        f1.fabriquerProduits(50);
+        //System.out.println(f1);
+
+        Employe e5 = new Fabricant.FabricantBuilder().setNrINSEE("f2").setNom("fab").setEchelon(2).setBase(10).setNbHeures(35).setNbUnitesProduites(100).setTauxCommissionUnite(10).createFabricant();
+        System.out.println(e5);
+        //e5.fabriquerProduits(20); réponse question 5 exercice 2 dans le document texte
+
+
+
+
 
     }
 

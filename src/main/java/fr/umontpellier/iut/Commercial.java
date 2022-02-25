@@ -1,6 +1,6 @@
 package fr.umontpellier.iut;
 
-public class Commercial extends Employe{
+public abstract class Commercial extends Employe{
 
     private double chiffreAffaires;
     private double tauxCommission;
@@ -17,6 +17,8 @@ public class Commercial extends Employe{
         System.out.println("Transaction négocié");
     }
 
-
-
+    @Override
+    public double getSalaireBrut() {
+        return super.getBase()+chiffreAffaires * tauxCommission;
+    }
 }

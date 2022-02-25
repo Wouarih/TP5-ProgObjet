@@ -1,4 +1,17 @@
 extends --> héritage
 
+Exercice 1;
 4- Je n'ai besoin de faire qu'une seule modification grâce au getSalaireBrut que je réutilise dans le getSalaireNet. Dans le cas où je ne l'aurais pas
 utilisé, il aurait été nécessaire de faire plus de modifications.
+
+Exercice 2:
+
+5- Le résultat de l'appel des méthodes getSalaireBrut/Net renvoie le salaire du fabricant. Parcontre la méthode fabriquerProduits
+ne fonctionne pas car cette méthode ne se trouve pas dans la classe Employé.
+
+6- Il faut au minimum 2 modifications, une dans getSalaireBrut en ajoutant + 100 et une une dans getBase en ajoutant + 100.
+
+Exercice 3 :
+
+1. En rendant la classe Commercial non-instanciable, on ne peut plus l'utiliser pour créer des objets Commercial. Alors soit on supprime
+les objets Commercial où les remplacent par Vendeur ou Representant

@@ -15,8 +15,7 @@ public class Employe {
         this.echelon = echelon;
         this.base = base;
         this.nbHeures = nbHeures;
-        this.salaireBrut = getSalaireBrut();
-        this.salaireNet = getSalaireNet();
+
     }
 
     public static class EmployeBuilder {
@@ -70,6 +69,14 @@ public class Employe {
         return salaireNet;
     }
 
+    public int getEchelon() {
+        return echelon;
+    }
+
+    protected double getBase(){
+        return base;
+    }
+
     @Override
     public String toString() {
         return "Employe{" +
@@ -78,8 +85,8 @@ public class Employe {
                 ", echelon=" + echelon +
                 ", base=" + base +
                 ", nbHeures=" + nbHeures +
-                ", salaireBrut=" + salaireBrut +
-                ", salaireNet=" + salaireNet +
+                ", salaireBrut=" + getSalaireBrut() +
+                ", salaireNet=" + getSalaireNet() +
                 '}';
     }
 }
